@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Latest compiled and minified CSS -->
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,6 +22,9 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
       rel="stylesheet"
     /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+
     <link rel="stylesheet" href="css/style.css" />
 
   </head>
@@ -37,19 +42,35 @@
                 <input type="text" class="search-input" placeholder="Search" />
                 <i class="fas fa-search"></i>
               <!-- </div> -->
-             
-              <button class="sender-m" id="sender-m">Sender Mobile</button>
-              <button class="sender-id" id="sender-id">Sender ID</button>
+              <div class="sender-types">
+                <button href="" id="sender-mobile">Sender Mobile</button>
+                <button href="" id="sender-ID">Sender ID</button>
+              </div>
+              <!-- <button class="sender-m" id="sender-m">Sender Mobile</button>
+              <button class="sender-id" id="sender-id">Sender ID</button> -->
           </div>
         </div>
       </div>
     </div>
     <!-- End Navbar -->
 
+    <div class="secound-nav">
+      <span style="font-size:30px;cursor:pointer" class="openmenue" onclick="openNav()">&#9776</span>
+      <span style="font-size:30px;cursor:pointer;" class="openmenue" onclick="openRightNav()">
+        <i class="fas fa-info-circle"></i>
+      </span>
+
+        <!-- For Mobile -->
+        <!-- <span style="font-size:30px;cursor:pointer;" class="openmenue" onclick="openMobileRightNav()"> -->
+
+    </div>
+
     <!-- Content -->
     <div class="content">
     <div class="row">
-      <div class="col-md-2 l-div">
+      <div class="sidenav col-md-2 l-div" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+
         <a href="#">Logout</a>
         <a href="#">Recive Transaction</a>
         <a href="#">Return to Sender</a>
@@ -79,8 +100,7 @@
 
       <div class="col-md-8 m-div">
 
-        <div class="Remittance-Info">
-         
+                <div class="Remittance-Info">
           <div class="title"> Remittance Info </div>
 
               <div class="row m-b-7">
@@ -110,6 +130,8 @@
                   </div>
                   </div>
                 </div>
+               
+
               </div>
 
               <div class="row m-b-7">
@@ -349,7 +371,10 @@
           <div class="row">
             <div class="col-md-6">
               <div class="row">
-                <div class="col-md-4 label-title">Mobile/Telephone</div>
+                <div class="col-md-4 label-title">
+                  Mobile/Telephone</div>
+                 
+                  
                 <div class="col-md-8 full-width">
                   <select name="" id="">
                     <option value="">Option</option>
@@ -495,12 +520,25 @@
               <div class="row">
                 <div class="col-md-4 p-l-10 label-title">Mobile/Telephone</div>
                 <div class="col-md-8 full-width">
+                  <select class="selectpicker">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Barbecue</option>
+                  </select>
+                  <select class="selectpicker countrypicker" data-flag="true" ></select>
+
                   <select name="" id="">
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                   </optgroup>
+                    <option value="" style="background-image:url(images/united-kingdom.svg);" >
+                      <!-- <img src="" alt="" style="width: 15px"> -->
+                    </option>
+                    <!-- <option value="">
+                      <img src="images/united-kingdom.svg" alt="" style="width: 15px">
+                    </option>
+                    <option value="">
+                      <img src="images/united-kingdom.svg" alt="" style="width: 15px">
+                    </option> -->
                 </select>
+                <input type="text">
                 </div>
               </div>
             </div>
@@ -520,8 +558,9 @@
             
       </div>
 
-      <div class="col-md-2 r-div">
+      <div class="col-md-2 r-div" id="rightSidenav">
         <div class="summury">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeRightNav()"><i class="far fa-window-close"></i></a>
           <p class="title">Summary</p>
           <p>Reciving Country: </p>
           <p>Service Type: </p>
@@ -564,6 +603,11 @@
     </div>
     <!-- End Footer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
     <script src="js.js"></script>
   </body>
 </html>
