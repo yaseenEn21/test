@@ -92,7 +92,13 @@ function openNav() {
     var x = window.matchMedia("(min-width: 360px) and (max-width: 767px)");
 
     if(x.matches){
-        document.getElementById("mySidenav").style.setProperty("height", "auto", "important");
+        // document.getElementById("mySidenav").style.setProperty("height", "auto", "important");
+
+        var element = document.getElementById("rightSidenav");
+        element.classList.remove("auto-hight");
+
+        document.getElementById("mySidenav").classList.toggle("auto-hight");
+      
     }else{
         document.getElementById("mySidenav").style.width = "250px";
     }
@@ -109,8 +115,23 @@ function openNav() {
   }
 
   function openRightNav() {
-    document.getElementById("rightSidenav").style.width = "250px";
-    document.getElementById("rightSidenav").style.setProperty("padding-left", "10px", "important");
+
+    var x = window.matchMedia("(min-width: 360px) and (max-width: 767px)");
+
+    if(x.matches){
+        // document.getElementById("mySidenav").style.setProperty("height", "auto", "important");
+        var element = document.getElementById("mySidenav");
+        element.classList.remove("auto-hight");
+        // document.getElementById("rightSidenav").style.setProperty("padding-top", "35px", "important");  
+        // document.getElementById("rightSidenav").style.setProperty("padding-bottom", "35px", "important");  
+
+        document.getElementById("rightSidenav").classList.toggle("auto-hight");
+    }else{
+        document.getElementById("rightSidenav").style.width = "250px";
+        document.getElementById("rightSidenav").style.setProperty("padding-left", "10px", "important");  
+      }
+
+   
     // document.getElementById("rightSidenav").style.width = "250px";padding-left
   }
     
