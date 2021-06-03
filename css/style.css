@@ -75,11 +75,12 @@ input {
   background-color: white;
   border-radius: 20px;
   cursor: pointer;
+  direction: rtl;
 
 }
 
-.sender-types #sender-mobile,
-.sender-types #sender-ID {
+.sender-types #sender-ID
+{
   display: inline-block;
   background-color: transparent;
   color: black;
@@ -88,11 +89,26 @@ input {
   margin: 0;
   border: 0;
 }
-
+.sender-types #sender-mobile{
+   display: inline-block;
+  /* background-color: transparent;
+  color: black; */
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  margin: 0;
+  border: 0;
+   background-color: rgb(101, 186, 71);
+  color: white;
+}
 .sender-types #sender-mobile:focus,
 .sender-types #sender-ID:focus {
   background-color: rgb(101, 186, 71);
   color: white;
+}
+
+#sender-ID:focus + #sender-mobile{
+  background-color: white;
+  color: black;
 }
 
 .sender-types #sender-ID {
