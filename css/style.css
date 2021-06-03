@@ -358,7 +358,9 @@ a:hover {
 .footer {
   background-color: #3b5e95;
   font-size: 14px;
-  padding: 0px
+  padding: 0px;
+  color: white;
+  text-align: center;
 }
 
 
