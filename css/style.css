@@ -432,6 +432,9 @@ select,
 
 /* Small */
 @media (min-width: 768px) {
+  .nav{
+    font-size: 0.9rem;
+  }
   .nav .col-md-6:first-of-type {
     width: 20%;
   }
@@ -472,6 +475,7 @@ select,
 /* Medium */
 @media (min-width: 992px) and (max-width: 1400px) {
 
+  
   .nav .col-md-6:first-of-type {
     width: 40%;
   }
