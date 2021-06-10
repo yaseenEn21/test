@@ -734,7 +734,7 @@ select,
     position: absolute;
     z-index: -1;
     box-shadow: unset;
-    overflow: scroll;
+/*     overflow: scroll; */
 
   }
 
